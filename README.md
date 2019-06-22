@@ -1,3 +1,4 @@
 # TheTools
 
-A description of this package.
+Small additions used in each project
+
