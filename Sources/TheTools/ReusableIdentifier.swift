@@ -8,11 +8,11 @@
 
 import Foundation
 
-public protocol ReusableIdentifier: class {
+public protocol Identifying: class {
     static var reuseIdentifier: String { get }
 }
 
-public extension ReusableIdentifier {
+public extension Identifying {
     static var reuseIdentifier: String {
         return "\(self)"
     }
