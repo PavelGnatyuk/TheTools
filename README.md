@@ -14,3 +14,5 @@ Small collection of reusable things.
 
 **UIApplication+getTopViewController** an extension with getTopViewController function.
 
+**DataController** standard data controller for Core Data 
+

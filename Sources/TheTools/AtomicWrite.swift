@@ -27,9 +27,10 @@
 /// ```
 ///
 /// Some related reads & inspiration:
-/// [swift-evolution proposal](https://github.com/apple/swift-evolution/blob/master/proposals/0258-property-wrappers.md)
-/// [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveSwift/blob/master/Sources/Atomic.swift)
-/// [obj.io](https://www.objc.io/blog/2019/01/15/atomic-variables-part-2/)
+/// 1. [swift-evolution proposal](https://github.com/apple/swift-evolution/blob/master/proposals/0258-property-wrappers.md)
+/// 2. [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveSwift/blob/master/Sources/Atomic.swift)
+/// 3. [obj.io](https://www.objc.io/blog/2019/01/15/atomic-variables-part-2/)
+/// 4.[Creating Thread-Safe Generic Values in Swif](https://basememara.com/creating-thread-safe-generic-values-in-swift/)
 
 import Foundation
 
