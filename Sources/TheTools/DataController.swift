@@ -13,7 +13,7 @@
 import Foundation
 import CoreData
 
-public class DataController {
+open class DataController {
     public let dataFolder: URL?
     public let bundle: Bundle
     public let modelName: String
