@@ -44,7 +44,7 @@ open class DataController {
         self.dataFolder = dataFolder
     }
     
-    public func saveContext() {
+    open func saveContext() {
         let context = self.viewContext
         if context.hasChanges {
             do {
@@ -58,7 +58,7 @@ open class DataController {
         }
     }
     
-    public func updateIfNeeded(descriptions: [NSPersistentStoreDescription]) -> [NSPersistentStoreDescription] {
+    open func updateIfNeeded(descriptions: [NSPersistentStoreDescription]) -> [NSPersistentStoreDescription] {
         guard let storeURL = dataFolder, let url = descriptions.first?.url else {
             return descriptions
         }
