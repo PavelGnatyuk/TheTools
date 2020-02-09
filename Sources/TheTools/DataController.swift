@@ -57,6 +57,14 @@ open class DataController {
             }
         }
     }
+    
+    public func updateIfNeeded(descriptions: [NSPersistentStoreDescription]) -> [NSPersistentStoreDescription] {
+        guard let storeURL = dataFolder, let url = descriptions.first?.url else {
+            return descriptions
+        }
+        let path = storeURL.appendingPathComponent(url.lastPathComponent)
+        return [NSPersistentStoreDescription(url: path)]
+    }
 }
 
 
@@ -71,14 +79,6 @@ extension DataController {
             }
         }
         return container
-    }
-
-    func updateIfNeeded(descriptions: [NSPersistentStoreDescription]) -> [NSPersistentStoreDescription] {
-        guard let storeURL = dataFolder, let url = descriptions.first?.url else {
-            return descriptions
-        }
-        let path = storeURL.appendingPathComponent(url.lastPathComponent)
-        return [NSPersistentStoreDescription(url: path)]
     }
 }
 
