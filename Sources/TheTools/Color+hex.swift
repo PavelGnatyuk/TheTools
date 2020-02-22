@@ -6,6 +6,7 @@
 //  Copyright © 2019 Pavel Gnatyuk. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit.UIColor
 
 public extension UIColor {
@@ -46,3 +47,4 @@ public extension UIColor {
         }
     }
 }
+#endif

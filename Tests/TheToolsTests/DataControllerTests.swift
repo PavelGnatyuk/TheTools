@@ -8,6 +8,8 @@
 import XCTest
 @testable import TheTools
 
+#if os(iOS)
+
 class DataControllerTests: XCTestCase {
 
     override func setUp() {
@@ -34,3 +36,5 @@ class DataControllerTests: XCTestCase {
     }
 
 }
+
+#endif

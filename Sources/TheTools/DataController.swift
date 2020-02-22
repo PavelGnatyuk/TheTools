@@ -10,6 +10,8 @@
 //  Copyright © 2019 Pavel Gnatyuk. All rights reserved.
 //
 
+#if os(iOS)
+
 import Foundation
 import CoreData
 
@@ -89,3 +91,4 @@ extension DataController: CustomStringConvertible {
     }
 }
 
+#endif

@@ -5,6 +5,8 @@
 //  Created by Pavel Gnatyuk on 22/06/2019.
 //
 
+#if canImport(UIKit)
+
 import XCTest
 @testable import TheTools
 
@@ -39,3 +41,4 @@ class ColorHexTests: XCTestCase {
     }
 
 }
+#endif

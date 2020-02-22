@@ -5,6 +5,8 @@
 //  Created by Pavel Gnatyuk on 10/11/2019.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 extension UIApplication {
@@ -23,3 +25,5 @@ extension UIApplication {
         return base
     }
 }
+
+#endif
