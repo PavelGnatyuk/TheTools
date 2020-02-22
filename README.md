@@ -20,4 +20,4 @@ Small collection of reusable things.
 
 ## References:
 1. [Creating a Standalone Swift Package with Xcode](https://developer.apple.com/documentation/xcode/creating_a_standalone_swift_package_with_xcode)
-
+2. [Swift Package](https://docs.swift.org/package-manager/PackageDescription/PackageDescription.html)
