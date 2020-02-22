@@ -14,15 +14,15 @@ public struct Wrapper<ViewController: UIViewController> {
     private(set) var image: UIImage? = nil
     private(set) var title: String? = nil
 
-    func add(image: UIImage?) -> Self {
+    public func add(image: UIImage?) -> Self {
         return Wrapper(viewController: viewController, image: image)
     }
     
-    func add(title: String?) -> Self {
+    public func add(title: String?) -> Self {
         return Wrapper(viewController: viewController, image: image, title: title)
     }
     
-    func wrap() -> UINavigationController {
+    public func wrap() -> UINavigationController {
         let navController = UINavigationController(rootViewController: viewController)
         navController.navigationBar.prefersLargeTitles = true
         image.map {
