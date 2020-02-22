@@ -13,7 +13,22 @@ public struct Wrapper<ViewController: UIViewController> {
     let viewController: ViewController
     private(set) var image: UIImage? = nil
     private(set) var title: String? = nil
+    
+    public init(viewController: ViewController) {
+        self.viewController = viewController
+    }
 
+    public init(viewController: ViewController, image: UIImage?) {
+        self.viewController = viewController
+        self.image = image
+    }
+
+    public init(viewController: ViewController, image: UIImage?, title: String?) {
+        self.viewController = viewController
+        self.image = image
+        self.title = title
+    }
+    
     public func add(image: UIImage?) -> Self {
         return Wrapper(viewController: viewController, image: image)
     }
