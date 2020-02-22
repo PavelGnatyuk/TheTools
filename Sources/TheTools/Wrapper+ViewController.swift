@@ -9,7 +9,7 @@
 
 import UIKit
 
-struct Wrapper<ViewController: UIViewController> {
+public struct Wrapper<ViewController: UIViewController> {
     let viewController: ViewController
     private(set) var image: UIImage? = nil
     private(set) var title: String? = nil
