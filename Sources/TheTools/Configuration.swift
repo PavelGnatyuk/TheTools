@@ -1,9 +1,43 @@
-//
-//  File.swift
-//  
-//
-//  Created by Pavel Gnatyuk on 18/01/2020.
-//
+///
+///  Configuration.swift
+///
+/// Desctiption:
+///  Enum to retrieve information from the bundle info.plist.
+///
+/// Sample:
+///
+/// ```
+///      struct AppConfigurationImpl: AppConfiguration {
+///      var bundleIdentifier: String {
+///            return try! Configuration.value(for: "CFBundleIdentifier")
+///      }
+///
+///      var appName: String {
+///            return try! Configuration.value(for: "Application name")
+///      }
+///
+///      var executable: String {
+///            return try! Configuration.value(for: "CFBundleExecutable")
+///      }
+///
+///      var bundleDisplayName: String {
+///            return try! Configuration.value(for: "CFBundleDisplayName")
+///      }
+///
+///      var bundleVersion: String {
+///            return try! Configuration.value(for: "CFBundleVersion")
+///      }
+///
+///      var bundleShortVersionString: String {
+///          return try! Configuration.value(for: "CFBundleShortVersionString")
+///      }
+///  }
+/// ```
+///
+///
+///
+///  Created by Pavel Gnatyuk on 18/01/2020.
+///
 
 import Foundation
 

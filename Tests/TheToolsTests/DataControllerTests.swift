@@ -22,7 +22,7 @@ class DataControllerTests: XCTestCase {
 
     func testThatDataCOntrollerCanBeCreated() {
         let bundle = Bundle(for: type(of: self))
-        let controller = DataController(modelName: "", bundle: bundle)
+        let controller = CoreDataContainer(modelName: "", bundle: bundle)
         XCTAssertNotNil(controller, "Failed to create a dummy Data Controller")
         XCTAssertEqual(controller.modelName, "", "Model name in the created Data controller instance should be empty string")
     }
@@ -30,7 +30,7 @@ class DataControllerTests: XCTestCase {
     func testThatDataCOntrollerCanBeCreatedWithModelName() {
         let modelName = "model"
         let bundle = Bundle(for: type(of: self))
-        let controller = DataController(modelName: modelName, bundle: bundle)
+        let controller = CoreDataContainer(modelName: modelName, bundle: bundle)
         XCTAssertNotNil(controller, "Failed to create a dummy Data Controller")
         XCTAssertEqual(controller.modelName, modelName, "Model name in the created Data controller instance does not equal to the input parameter")
     }

@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  CustomDebugStringConvertible.swift
 //  
 //
 //  Created by Pavel Gnatyuk on 04/09/2019.

@@ -1,5 +1,5 @@
 //
-//  DataController.swift
+//  CoreDataContainer.swift
 //
 //  ## References:
 //  1. [Core Data and App Extensions: Sharing a Single Database](https://medium.com/better-programming/core-data-and-app-extensions-sharing-a-single-database-24f8cac35faa)
@@ -15,7 +15,7 @@
 import Foundation
 import CoreData
 
-open class DataController {
+open class CoreDataContainer {
     public let dataFolder: URL?
     public let bundle: Bundle
     public let modelName: String
@@ -70,12 +70,13 @@ open class DataController {
 }
 
 
-extension DataController {
+extension CoreDataContainer {
     func makePersistentContainer() -> NSPersistentContainer {
         let container = NSPersistentContainer(name: modelName, managedObjectModel: managedObjectModel)
         // `persistentStoreDescriptions` of the container by default is an array of one element - a path to the 'Library/Application Support/lazyness.sqlite'
         container.persistentStoreDescriptions = updateIfNeeded(descriptions: container.persistentStoreDescriptions)
         container.loadPersistentStores { (storeDescription, error) in
+            debugPrint("Persistent Store: \(String(describing: storeDescription.url)) loaded:\(error == nil)")
             if let error = error as NSError? {
                 fatalError("Unresolved error: \(error), \(error.userInfo)")
             }
@@ -84,9 +85,9 @@ extension DataController {
     }
 }
 
-extension DataController: CustomStringConvertible {
+extension CoreDataContainer: CustomStringConvertible {
     public var description: String {
-        let text = "\(DataController.self) model name = \(modelName) data folder = \(String(describing: dataFolder))"
+        let text = "\(CoreDataContainer.self) model name = \(modelName) data folder = \(String(describing: dataFolder))"
         return text
     }
 }

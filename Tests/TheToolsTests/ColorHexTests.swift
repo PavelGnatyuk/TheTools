@@ -35,8 +35,8 @@ class ColorHexTests: XCTestCase {
         XCTAssertTrue(color.isEqual(UIColor.blue))
     }
     
-    func testThatPureRedColorIsCreatedFromHex() {
-        let color = UIColor(hexString: "#FF0000")
+    func testThatPureRedColorIsCreatedFromHex() throws {
+        let color = try XCTUnwrap(UIColor(hex: "#FF0000FF"))
         XCTAssertTrue(color.isEqual(UIColor.red))
     }
 
