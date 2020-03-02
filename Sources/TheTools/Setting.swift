@@ -32,11 +32,11 @@ public struct Setting<T> {
     
     public var wrappedValue: T {
         get {
-            let value = storage.value(forKey: key) as? T
+            let value = storage.object(forKey: key) as? T
             return value ?? defaultValue
         }
         set {
-            storage.setValue(newValue, forKey: key)
+            storage.set(newValue, forKey: key)
         }
     }
 }
