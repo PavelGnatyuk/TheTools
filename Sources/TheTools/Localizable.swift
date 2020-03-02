@@ -10,16 +10,16 @@
 import Foundation
 
 @propertyWrapper
-struct Localizable {
+public struct Localizable {
     
     private var key: String
     
-    var wrappedValue: String {
+    public var wrappedValue: String {
         get { NSLocalizedString(key, comment: "") }
         set { key = newValue }
     }
     
-    init(wrappedValue: String) {
+    public init(wrappedValue: String) {
         self.key = wrappedValue
     }
 }

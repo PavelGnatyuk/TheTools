@@ -10,7 +10,7 @@
 //  Copyright © 2019 Pavel Gnatyuk. All rights reserved.
 //
 
-#if os(iOS)
+#if canImport(CoreData)
 
 import Foundation
 import CoreData

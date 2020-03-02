@@ -1,14 +1,28 @@
-//
-//  File.swift
-//  
-//
-//  Created by Pavel Gnatyuk on 22/02/2020.
-//
+///
+///  Wrapper+UIViewController.swift
+///
+///  Wrapp a view controller into a navigation controller.
+///
+///
+///  Created by Pavel Gnatyuk on 22/02/2020.
+///
+
+/*
+    Example:
+```
+let more = Wrapper(viewController: makeMoreViewController())
+    .add(image: UIImage(systemName: "table.badge.more"))
+    .add(title: NSLocalizedString("More", comment: "More tabbar item title"))
+    .wrap()
+```
+*/
 
 #if canImport(UIKit)
 
 import UIKit
 
+
+/// Wrap a view controller into a navigation controller
 public struct Wrapper<ViewController: UIViewController> {
     let viewController: ViewController
     private(set) var image: UIImage? = nil

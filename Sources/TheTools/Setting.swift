@@ -19,18 +19,18 @@
 import Foundation
 
 @propertyWrapper
-struct Setting<T> {
+public struct Setting<T> {
     private let key: String
     private let defaultValue: T
     private let storage: UserDefaults
     
-    init(key: String, defaultValue: T, storage: UserDefaults = .standard) {
+    public init(key: String, defaultValue: T, storage: UserDefaults = .standard) {
         self.key = key
         self.defaultValue = defaultValue
         self.storage = storage
     }
     
-    var wrappedValue: T {
+    public var wrappedValue: T {
         get {
             let value = storage.value(forKey: key) as? T
             return value ?? defaultValue
@@ -41,7 +41,7 @@ struct Setting<T> {
     }
 }
 
-extension Setting where T: ExpressibleByNilLiteral {
+public extension Setting where T: ExpressibleByNilLiteral {
     init(key: String, storage: UserDefaults = .standard) {
         self.init(key: key, defaultValue: nil, storage: storage)
     }
