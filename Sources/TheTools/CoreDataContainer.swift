@@ -46,20 +46,6 @@ open class CoreDataContainer {
         self.dataFolder = dataFolder
     }
     
-    open func saveContext() {
-        let context = self.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-                
-            } catch let error as NSError {
-                // Added from a Florian book Core Data. It simply abandons the unsaved data.
-                context.rollback()
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        }
-    }
-    
     open func updateIfNeeded(descriptions: [NSPersistentStoreDescription]) -> [NSPersistentStoreDescription] {
         guard let storeURL = dataFolder, let url = descriptions.first?.url else {
             return descriptions
