@@ -2,6 +2,8 @@
 
 Small collection of reusable things.
 
+**String extension** with **isBlank** functions checking that a string (including optinal) is blank. 
+
 **Configuration** retrieving data from the info.plist
 
 **Identifying** contains a computed property *reuseIdentifier*. Mainly used in the UITableViewCell derivatives. 
