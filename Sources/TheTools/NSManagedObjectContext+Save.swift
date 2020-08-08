@@ -24,7 +24,7 @@ public extension NSManagedObjectContext {
         }
     }
     
-    @discardableResult public func saveIfNeeded() throws -> Bool {
+    @discardableResult func saveIfNeeded() throws -> Bool {
         guard hasChanges else {
             return false
         }
