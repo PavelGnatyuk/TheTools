@@ -36,6 +36,13 @@ open class CoreDataContainer {
         return context
     }()
     
+    public lazy var backgroundViewContext: NSManagedObjectContext = {
+        let context = self.persistentContainer.newBackgroundContext()
+        context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        context.undoManager = nil
+        return context
+    }()
+    
     /// Initialize the Core Data stack
     /// - Parameters:
     ///   - bundle: Bunlde where the data model is located
